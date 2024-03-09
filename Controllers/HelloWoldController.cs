@@ -17,9 +17,10 @@ public class HelloWoldController : ControllerBase
         _logger = logger;
     }
 
+    [HttpGet]
     public IActionResult Get()
     {
-        //_logger.LogError("Probando error");
+        _logger.LogWarning("Probando error");
         return Ok(helloWorldService.GetHelloWorld());
     }
 
